@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/vista2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,97 +9,112 @@
         android:id="@+id/titulo"
         android:layout_width="388dp"
         android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="35dp"
         android:fontFamily="casual"
         android:text="Información del Contacto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="35dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="43dp"
         android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo"
-        app:srcCompat="@drawable/phone" />
+        app:srcCompat="@drawable/phone"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="75dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="44dp"
         android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="17dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/mail" />
+        app:srcCompat="@drawable/mail"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="129dp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="44dp"
         android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/globe" />
+        app:srcCompat="@drawable/globe"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="185dp" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="46dp"
         android:layout_height="44dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/city" />
+        app:srcCompat="@drawable/city"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="247dp" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="46dp"
         android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="14dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/signpost" />
+        app:srcCompat="@drawable/signpost"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="323dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="218dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Correo"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="125dp" />
 
     <EditText
         android:id="@+id/editTextPhone"
-        android:layout_width="232dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
         android:text="Telefono"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="75dp" />
 
     <AutoCompleteTextView
         android:id="@+id/textoPaises"
-        android:layout_width="234dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
         android:completionHint="Medellín"
         android:text="País"
         android:textAlignment="viewStart"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textoCiudad"
+        android:layout_width="211dp"
+        android:layout_height="42dp"
+        android:text="Ciudad"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="249dp" />
+
+    <EditText
+        android:id="@+id/textDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direccion"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:text="Siguiente"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="412dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
