@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:fontFamily="casual"
         android:hint="Nombre"
@@ -69,8 +69,8 @@
         android:id="@+id/btnSiguiente"
         android:layout_width="136dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#757171"
         android:fontFamily="casual"
         android:text="Siguiente"
@@ -85,10 +85,10 @@
         android:layout_width="60dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/face1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoHeader"/>
+        app:layout_constraintTop_toBottomOf="@+id/textoHeader" />
 
     <ImageView
         android:id="@+id/iconoCara2"
