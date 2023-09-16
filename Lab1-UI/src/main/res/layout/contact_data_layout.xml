@@ -51,8 +51,8 @@
         android:layout_width="46dp"
         android:layout_height="42dp"
         app:srcCompat="@drawable/signpost"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="305dp" />
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="323dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -83,5 +83,38 @@
         android:textAlignment="viewStart"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="186dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textoCiudad"
+        android:layout_width="211dp"
+        android:layout_height="42dp"
+        android:text="Ciudad"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="249dp" />
+
+    <EditText
+        android:id="@+id/textDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direccion"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:text="Siguiente"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="412dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
