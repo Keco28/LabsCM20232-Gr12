@@ -9,7 +9,6 @@ import android.widget.AutoCompleteTextView;
 
 class ContactDataActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        setContent {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.contact_data_layout)
 
@@ -42,6 +41,4 @@ class ContactDataActivity : ComponentActivity() {
             ciudades_adaptador.setAdapter(adapter2)
         }
     }
-
-}
 
