@@ -12,19 +12,21 @@
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#757171"
+        android:backgroundTint="#D3D3D3"
         android:fontFamily="casual"
         android:text="@string/cambiar"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textoFecha"
         app:layout_constraintTop_toBottomOf="@+id/sexos" />
 
     <EditText
         android:id="@+id/campoNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="248dp"
+        android:layout_height="47dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
         android:ems="10"
@@ -49,20 +51,20 @@
         android:textStyle="bold"
         android:typeface="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/campoApellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="243dp"
+        android:layout_height="46dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:fontFamily="casual"
         android:hint="@string/apellido"
         android:inputType="text|textCapWords|textNoSuggestions"
         app:layout_constraintStart_toEndOf="@+id/iconoCara2"
-        app:layout_constraintTop_toBottomOf="@+id/campoNombre" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSiguiente"
@@ -70,7 +72,7 @@
         android:layout_height="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#757171"
+        android:backgroundTint="#D3D3D3"
         android:fontFamily="casual"
         android:text="@string/siguiente"
         android:textColor="#000000"
@@ -93,26 +95,29 @@
         android:id="@+id/iconoCara2"
         android:layout_width="60dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
         android:background="#FFFFFF"
-        android:visibility="visible"
         android:src="@drawable/face2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoCara1"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/campoNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textoHeader"
         tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/iconoSexo"
         android:layout_width="60dp"
         android:layout_height="49dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:foregroundTint="#000000"
-        android:visibility="visible"
         android:src="@drawable/hm"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/textoSexo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoCara2"/>
+        app:layout_constraintTop_toBottomOf="@+id/iconoCara2" />
 
     <ImageView
         android:id="@+id/iconoCalendario"
@@ -121,8 +126,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/cumple"
+        app:layout_constraintEnd_toStartOf="@+id/textoFecha"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoSexo"/>
+        app:layout_constraintTop_toBottomOf="@+id/iconoSexo" />
 
     <ImageView
         android:id="@+id/iconoEducacion"
@@ -134,15 +142,17 @@
         android:foregroundTint="#FFFFFF"
         android:src="@drawable/school"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoCalendario"/>
+        app:layout_constraintTop_toBottomOf="@+id/iconoCalendario" />
 
     <RadioGroup
         android:id="@+id/sexos"
-        android:layout_width="192dp"
+        android:layout_width="172dp"
         android:layout_height="51dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textoSexo"
         app:layout_constraintTop_toBottomOf="@+id/campoApellido">
 
@@ -167,11 +177,13 @@
         android:id="@+id/textoSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="casual"
         android:text="@string/sexo"
         android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/sexos"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/iconoSexo"
         app:layout_constraintTop_toBottomOf="@+id/campoApellido" />
 
@@ -180,8 +192,8 @@
         android:layout_width="133dp"
         android:layout_height="29dp"
         android:layout_marginStart="176dp"
-        android:layout_marginTop="28dp"
-        android:background="#F8F8F8"
+        android:layout_marginTop="32dp"
+        android:background="#D3D3D3"
         android:entries="@array/grados_escolaridad"
         android:spinnerMode="dialog"
         android:visibility="visible"
@@ -202,6 +214,8 @@
         android:inputType="datetime|date"
         android:selectAllOnFocus="false"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnFecha"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/iconoCalendario"
         app:layout_constraintTop_toBottomOf="@+id/sexos" />
 
@@ -210,7 +224,7 @@
         android:layout_width="144dp"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="casual"
         android:text="@string/grado_de_escolaridad"
         android:visibility="visible"
