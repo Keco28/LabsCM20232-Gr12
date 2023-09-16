@@ -29,9 +29,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:src="@drawable/phone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoHeader2"
-        app:srcCompat="@drawable/phone" />
+        app:layout_constraintTop_toBottomOf="@+id/textoHeader2"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -39,9 +39,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/mail"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/mail" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -49,9 +49,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/globe"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/globe" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -59,9 +59,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/city"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/city" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -69,9 +69,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/signpost"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/signpost" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -83,6 +83,7 @@
         android:fontFamily="casual"
         android:hint="Correo"
         android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
@@ -96,6 +97,7 @@
         android:fontFamily="casual"
         android:hint="Telefono"
         android:inputType="phone"
+        android:imeOptions="actionNext"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textoHeader2" />
 
@@ -105,10 +107,9 @@
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="26dp"
-        android:completionHint="Medellín"
         android:fontFamily="casual"
         android:hint="País"
-        android:textAlignment="viewStart"
+        android:imeOptions="actionNext"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
@@ -120,6 +121,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="casual"
         android:hint="Ciudad"
+        android:imeOptions="actionNext"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textoPaises" />
 
@@ -133,6 +135,7 @@
         android:fontFamily="casual"
         android:hint="Dirección"
         android:inputType="text"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textoCiudad" />
 

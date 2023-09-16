@@ -31,6 +31,7 @@
         android:fontFamily="casual"
         android:hint="@string/nombre"
         android:inputType="text|textCapWords|textNoSuggestions"
+        android:imeOptions="actionNext"
         app:layout_constraintStart_toEndOf="@+id/iconoCara1"
         app:layout_constraintTop_toBottomOf="@+id/textoHeader" />
 
@@ -61,6 +62,7 @@
         android:fontFamily="casual"
         android:hint="@string/apellido"
         android:inputType="text|textCapWords|textNoSuggestions"
+        android:imeOptions="actionDone"
         app:layout_constraintStart_toEndOf="@+id/iconoCara2"
         app:layout_constraintTop_toBottomOf="@+id/campoNombre" />
 
