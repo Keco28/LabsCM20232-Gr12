@@ -15,4 +15,11 @@
     <string name="Universitaria">Universität</string>
     <string name="Otro">Andere</string>
     <string name="Información_Personal">Persönliche Angaben</string>
+    <string name="telefono">Telefon</string>
+    <string name="correo">E-Mail</string>
+    <string name="pa_s">Land</string>
+    <string name="ciudad">Stadt</string>
+    <string name="direcci_n">Adresse</string>
+    <string name="informacion_contacto">Kontaktinformationen</string>
+    <string name="siguientedos">Weiter</string>
 </resources>

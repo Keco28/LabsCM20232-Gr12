@@ -33,12 +33,16 @@ class ContactDataActivity : ComponentActivity() {
 
             val paises_adaptador = findViewById<AutoCompleteTextView>(R.id.textoPaises)
 
-            paises_adaptador.setOnClickListener {
-                paises_adaptador.requestFocus()
-            }
+
             var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, paises_latam)
             paises_adaptador.threshold = 0
             paises_adaptador.setAdapter(adapter)
+
+            val ciudades_adaptador = findViewById<AutoCompleteTextView>(R.id.textoCiudad)
+            var adapter_dos = ArrayAdapter(this, android.R.layout.simple_list_item_1, ciudades_colombia)
+            ciudades_adaptador.threshold = 0
+            ciudades_adaptador.setAdapter(adapter_dos)
+
 
     }
 

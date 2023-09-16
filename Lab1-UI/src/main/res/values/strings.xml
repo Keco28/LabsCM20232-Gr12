@@ -15,6 +15,13 @@
     <string name="Secundaria">Secundaria</string>
     <string name="Universitaria">Universitaria</string>
     <string name="Otro">Otro</string>
+    <string name="telefono">Telefono</string>
+    <string name="correo">Correo</string>
+    <string name="pa_s">País</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="informacion_contacto">Información de Contacto</string>
+    <string name="siguientedos">Siguiente</string>
 
     <string-array name="grados_escolaridad">
         <item>@string/Primaria</item>
