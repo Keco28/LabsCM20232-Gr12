@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Labs20232-Gr12</string>
     <string name="title_activity_contact_data">ContactDataActivity</string>
+    <string name="telefono">Telefono</string>
 </resources>
