@@ -6,115 +6,144 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/textoHeader2"
         android:layout_width="388dp"
         android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="casual"
-        android:text="Información del Contacto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="35dp" />
+        android:lineSpacingExtra="8sp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Información de Contacto" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="43dp"
-        android:layout_height="37dp"
-        app:srcCompat="@drawable/phone"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="75dp" />
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoHeader2"
+        app:srcCompat="@drawable/phone" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="44dp"
-        android:layout_height="38dp"
-        app:srcCompat="@drawable/mail"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="129dp" />
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/mail" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="44dp"
-        android:layout_height="43dp"
-        app:srcCompat="@drawable/globe"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="185dp" />
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/globe" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="46dp"
-        android:layout_height="44dp"
-        app:srcCompat="@drawable/city"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="247dp" />
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/city" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="46dp"
-        android:layout_height="42dp"
-        app:srcCompat="@drawable/signpost"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="323dp" />
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/signpost" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Correo"
         android:inputType="textEmailAddress"
-        android:text="Correo"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Telefono"
         android:inputType="phone"
-        android:text="Telefono"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textoHeader2" />
 
     <AutoCompleteTextView
         android:id="@+id/textoPaises"
         android:layout_width="209dp"
         android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
         android:completionHint="Medellín"
-        android:text="País"
+        android:fontFamily="casual"
+        android:hint="País"
         android:textAlignment="viewStart"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="186dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <AutoCompleteTextView
         android:id="@+id/textoCiudad"
         android:layout_width="211dp"
         android:layout_height="42dp"
-        android:text="Ciudad"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="249dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:hint="Ciudad"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textoPaises" />
 
     <EditText
         android:id="@+id/textDireccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Dirección"
         android:inputType="text"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="320dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Direccion"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/textoCiudad" />
 
     <Button
         android:id="@+id/btn_siguiente"
         android:layout_width="130dp"
         android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:text="Siguiente"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="412dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

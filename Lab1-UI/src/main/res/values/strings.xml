@@ -1,5 +1,26 @@
 <resources>
     <string name="app_name">Labs20232-Gr12</string>
-    <string name="title_activity_contact_data">ContactDataActivity</string>
-    <string name="telefono">Telefono</string>
+    <string name="title_activity_contact_data" translatable="false">ContactDataActivity</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="nombre">Nombre</string>
+    <string name="Información_Personal">Información Personal</string>
+    <string name="apellido">Apellido</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+    <string name="sexo">Sexo:</string>
+    <string name="fecha_de_nacimiento">Fecha de Nacimiento:</string>
+    <string name="grado_de_escolaridad">Grado de Escolaridad:</string>
+    <string name="Primaria">Primaria</string>
+    <string name="Secundaria">Secundaria</string>
+    <string name="Universitaria">Universitaria</string>
+    <string name="Otro">Otro</string>
+
+    <string-array name="grados_escolaridad">
+        <item>@string/Primaria</item>
+        <item>@string/Secundaria</item>
+        <item>@string/Universitaria</item>
+        <item>@string/Otro</item>
+    </string-array>
+
 </resources>

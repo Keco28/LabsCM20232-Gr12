@@ -4,6 +4,14 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import co.edu.udea.compumovil.gr12_20232.lab1.ui.theme.Labs20232Gr12Theme
 import android.widget.AutoCompleteTextView;
 
 
@@ -32,13 +40,7 @@ class ContactDataActivity : ComponentActivity() {
             paises_adaptador.threshold = 0
             paises_adaptador.setAdapter(adapter)
 
-            val ciudades_adaptador = findViewById<AutoCompleteTextView>(R.id.textoCiudad)
-            ciudades_adaptador.setOnClickListener{
-                ciudades_adaptador.requestFocus()
-            }
-            var adapter2 = ArrayAdapter(this, android.R.layout.simple_list_item_1,ciudades_colombia)
-            ciudades_adaptador.threshold = 0
-            ciudades_adaptador.setAdapter(adapter2)
-        }
     }
+
+}
 

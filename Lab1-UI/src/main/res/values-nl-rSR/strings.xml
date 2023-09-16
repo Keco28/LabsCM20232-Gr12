@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Labs20232-Gr12</string>
+    <string name="cambiar">ändern</string>
+    <string name="nombre">Name</string>
+    <string name="apellido">Nachnamen</string>
+    <string name="siguiente">folgende</string>
+    <string name="hombre">Mann</string>
+    <string name="mujer">Frauen</string>
+    <string name="sexo">Sex:</string>
+    <string name="fecha_de_nacimiento">Geburtsdatum:</string>
+    <string name="grado_de_escolaridad">Schulnote:</string>
+    <string name="Primaria">Primär</string>
+    <string name="Secundaria">Sekundär</string>
+    <string name="Universitaria">Universität</string>
+    <string name="Otro">Andere</string>
+    <string name="Información_Personal">Persönliche Angaben</string>
 </resources>
