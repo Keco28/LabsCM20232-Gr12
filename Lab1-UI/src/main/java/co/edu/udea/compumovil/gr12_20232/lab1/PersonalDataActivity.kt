@@ -1,6 +1,7 @@
 package co.edu.udea.compumovil.gr12_20232.lab1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -32,7 +33,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.personal_data_layout)
 
-
+        findViewById<Button>(R.id.btnSiguiente).setOnClickListener {
+            val intent = Intent(this, ContactDataActivity::class.java)
+            startActivity(intent)
+        }
         /// DatePicker inicio
         btnFecha = findViewById(R.id.btnFecha)
         textofecha = findViewById(R.id.textoFecha)
@@ -76,5 +80,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         /// Spinner final
+
+
     }
 }
