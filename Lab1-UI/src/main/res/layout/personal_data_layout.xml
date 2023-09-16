@@ -11,27 +11,15 @@
         android:layout_width="92dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#757171"
         android:fontFamily="casual"
         android:text="Cambiar"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textoNacimiento"
+        app:layout_constraintStart_toEndOf="@+id/textoFecha"
         app:layout_constraintTop_toBottomOf="@+id/sexos" />
-
-    <TextView
-        android:id="@+id/textoNacimiento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
-        android:fontFamily="casual"
-        android:text="Fecha de Nacimiento:"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/iconoCalendario"
-        app:layout_constraintTop_toBottomOf="@+id/textoSexo" />
 
     <EditText
         android:id="@+id/campoNombre"
@@ -98,9 +86,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/face1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoHeader"
-        app:srcCompat="@drawable/face1" />
+        app:layout_constraintTop_toBottomOf="@+id/textoHeader"/>
 
     <ImageView
         android:id="@+id/iconoCara2"
@@ -110,10 +98,9 @@
         android:layout_marginTop="24dp"
         android:background="#FFFFFF"
         android:visibility="visible"
+        android:src="@drawable/face2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iconoCara1"
-        app:srcCompat="@drawable/face2"
-        tools:srcCompat="@drawable/face2"
         tools:visibility="visible" />
 
     <ImageView
@@ -124,9 +111,9 @@
         android:layout_marginTop="24dp"
         android:foregroundTint="#000000"
         android:visibility="visible"
+        android:src="@drawable/hm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoCara2"
-        app:srcCompat="@drawable/hm" />
+        app:layout_constraintTop_toBottomOf="@+id/iconoCara2"/>
 
     <ImageView
         android:id="@+id/iconoCalendario"
@@ -134,9 +121,9 @@
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/cumple"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoSexo"
-        app:srcCompat="@drawable/cumple" />
+        app:layout_constraintTop_toBottomOf="@+id/iconoSexo"/>
 
     <ImageView
         android:id="@+id/iconoEducacion"
@@ -146,9 +133,9 @@
         android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         android:foregroundTint="#FFFFFF"
+        android:src="@drawable/school"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoCalendario"
-        app:srcCompat="@drawable/school" />
+        app:layout_constraintTop_toBottomOf="@+id/iconoCalendario"/>
 
     <RadioGroup
         android:id="@+id/sexos"
@@ -191,13 +178,45 @@
 
     <Spinner
         android:id="@+id/spinnerEducacion"
-        android:layout_width="155dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="133dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="28dp"
         android:background="#F8F8F8"
-        android:spinnerMode="dropdown"
+        android:entries="@array/grados_escolaridad"
+        android:spinnerMode="dialog"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/iconoEducacion"
-        app:layout_constraintTop_toBottomOf="@+id/textoNacimiento" />
+        app:layout_constraintTop_toBottomOf="@+id/textoFecha"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/textoFecha"
+        android:layout_width="161dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="casual"
+        android:hint="Fecha de Nacimiento:"
+        android:inputType="datetime|date"
+        android:selectAllOnFocus="false"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/iconoCalendario"
+        app:layout_constraintTop_toBottomOf="@+id/sexos" />
+
+    <TextView
+        android:id="@+id/textoSpinner"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:text="Grado de Escolaridad:"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/iconoEducacion"
+        app:layout_constraintTop_toBottomOf="@+id/textoFecha"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
