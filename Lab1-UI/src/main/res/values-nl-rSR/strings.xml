@@ -10,6 +10,7 @@
     <string name="sexo">Sex:</string>
     <string name="fecha_de_nacimiento">Geburtsdatum:</string>
     <string name="grado_de_escolaridad">Schulnote:</string>
+    <string name="Seleccione">Wählen</string>
     <string name="Primaria">Primär</string>
     <string name="Secundaria">Sekundär</string>
     <string name="Universitaria">Universität</string>

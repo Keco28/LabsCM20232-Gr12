@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/btnFecha"
-        android:layout_width="92dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#757171"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D3D3D3"
         android:fontFamily="casual"
         android:text="@string/cambiar"
         android:textColor="#000000"
@@ -72,7 +72,7 @@
         android:layout_height="60dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#757171"
+        android:backgroundTint="#D3D3D3"
         android:fontFamily="casual"
         android:text="@string/siguiente"
         android:textColor="#000000"
@@ -131,12 +131,12 @@
         android:layout_width="60dp"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="#FFFFFF"
         android:foregroundTint="#FFFFFF"
         android:src="@drawable/school"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoCalendario"/>
+        app:layout_constraintTop_toBottomOf="@+id/iconoCalendario" />
 
     <RadioGroup
         android:id="@+id/sexos"
@@ -159,7 +159,6 @@
             android:id="@+id/btnMujer"
             android:layout_width="match_parent"
             android:layout_height="51dp"
-            android:checked="true"
             android:fontFamily="casual"
             android:text="@string/mujer" />
 
@@ -179,11 +178,11 @@
 
     <Spinner
         android:id="@+id/spinnerEducacion"
-        android:layout_width="133dp"
-        android:layout_height="29dp"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
         android:layout_marginStart="176dp"
-        android:layout_marginTop="28dp"
-        android:background="#F8F8F8"
+        android:layout_marginTop="24dp"
+        android:background="#D3D3D3"
         android:entries="@array/grados_escolaridad"
         android:spinnerMode="dialog"
         android:visibility="visible"
@@ -194,7 +193,7 @@
     <EditText
         android:id="@+id/textoFecha"
         android:layout_width="161dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:ems="10"
@@ -212,7 +211,7 @@
         android:layout_width="144dp"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="casual"
         android:text="@string/grado_de_escolaridad"
         android:visibility="visible"

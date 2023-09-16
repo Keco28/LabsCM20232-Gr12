@@ -3,6 +3,7 @@ package co.edu.udea.compumovil.gr12_20232.lab1
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -10,6 +11,9 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.AdapterView
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,15 +32,33 @@ class MainActivity : ComponentActivity() {
     private lateinit var calendar: Calendar
     private lateinit var spinnerEducacion: Spinner
     private lateinit var textoSpinner: TextView
+    private lateinit var campoNombre: EditText
+    private lateinit var campoApellido: EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.personal_data_layout)
 
+        //verificación de datos obligatorios y cambio de vista
         findViewById<Button>(R.id.btnSiguiente).setOnClickListener {
-            val intent = Intent(this, ContactDataActivity::class.java)
-            startActivity(intent)
+            try {
+                if (validarCampos()){
+                    imprimirDatos()
+                    val intent = Intent(this, ContactDataActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    Log.d("TAG", "nonono, llene los datos bién y sin pereza pues")
+                }
+            }catch (ex: Exception){
+                Log.d("TAG", "Error por fuerita")
+            }
         }
+
+        campoNombre = findViewById(R.id.campoNombre)
+        campoApellido = findViewById(R.id.campoApellido)
+        textofecha = findViewById(R.id.textoFecha)
+
         /// DatePicker inicio
         btnFecha = findViewById(R.id.btnFecha)
         textofecha = findViewById(R.id.textoFecha)
@@ -82,5 +104,51 @@ class MainActivity : ComponentActivity() {
         /// Spinner final
 
 
+    }
+
+
+    private fun validarCampos(): Boolean {
+        val nombre = campoNombre.text.toString()
+        val apellido = campoApellido.text.toString()
+        val fecha = textofecha.text.toString()
+
+        var esValido = true
+
+
+        if (nombre.isEmpty()) {
+            campoNombre.setError("Este campo es obligatorio")
+            esValido = false
+        }else {
+            campoNombre.error = null
+        }
+
+        if (apellido.isEmpty()) {
+            campoApellido.setError("Este campo es obligatorio")
+            esValido = false
+        }else {
+            campoApellido.error = null
+        }
+
+        if (fecha.isEmpty()) {
+            textofecha.setError("Este campo es obligatorio")
+            esValido = false
+        }else {
+            textofecha.error = null
+        }
+
+        return esValido
+    }
+
+    private fun imprimirDatos(){
+        Log.d("Información Personal", "Información Personal" )
+        Log.d("NOMBRE", campoNombre.text.toString())
+        Log.d("APELLIDO", campoApellido.text.toString())
+        val sexo = findViewById<RadioGroup>(R.id.sexos).checkedRadioButtonId
+        if (sexo!=-1){ Log.d("SEXO", "${findViewById<RadioButton>(sexo).text}")
+        }
+        Log.d("FECHA DE NACIMIENTO", textofecha.text.toString())
+        if (!spinnerEducacion.selectedItem.toString().equals("Seleccione")){
+            Log.d("GRADO DE ESCOLARIDAD", spinnerEducacion.selectedItem.toString())
+        }
     }
 }
