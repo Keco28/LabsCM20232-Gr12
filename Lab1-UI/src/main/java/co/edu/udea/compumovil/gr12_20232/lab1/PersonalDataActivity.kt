@@ -43,14 +43,23 @@ class MainActivity : ComponentActivity() {
         //verificación de datos obligatorios y cambio de vista
         findViewById<Button>(R.id.btnSiguiente).setOnClickListener {
             try {
-                if (validarCampos()){
-                    imprimirDatos()
+                if (validarCampos()) {
                     val intent = Intent(this, ContactDataActivity::class.java)
+                    intent.putExtra("NOMBRE", campoNombre.text.toString())
+                    intent.putExtra("APELLIDO", campoApellido.text.toString())
+                    val sexo = findViewById<RadioGroup>(R.id.sexos).checkedRadioButtonId
+                    if (sexo != -1) {
+                        intent.putExtra("SEXO", "${findViewById<RadioButton>(sexo).text}")
+                    }
+                    intent.putExtra("FECHA", textofecha.text.toString())
+                    if (!spinnerEducacion.selectedItem.toString().equals("Seleccione")) {
+                        intent.putExtra("ESCOLARIDAD", spinnerEducacion.selectedItem.toString())
+                    }
                     startActivity(intent)
-                }else{
+                } else {
                     Log.d("TAG", "nonono, llene los datos bién y sin pereza pues")
                 }
-            }catch (ex: Exception){
+            } catch (ex: Exception) {
                 Log.d("TAG", "Error por fuerita")
             }
         }
@@ -95,7 +104,12 @@ class MainActivity : ComponentActivity() {
         spinnerEducacion.adapter = adapter
 
         spinnerEducacion.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parentView: AdapterView<*>?, selectedItemView: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parentView: AdapterView<*>?,
+                selectedItemView: View?,
+                position: Int,
+                id: Long
+            ) {
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>?) {
@@ -118,37 +132,24 @@ class MainActivity : ComponentActivity() {
         if (nombre.isEmpty()) {
             campoNombre.setError("Este campo es obligatorio")
             esValido = false
-        }else {
+        } else {
             campoNombre.error = null
         }
 
         if (apellido.isEmpty()) {
             campoApellido.setError("Este campo es obligatorio")
             esValido = false
-        }else {
+        } else {
             campoApellido.error = null
         }
 
         if (fecha.isEmpty()) {
             textofecha.setError("Este campo es obligatorio")
             esValido = false
-        }else {
+        } else {
             textofecha.error = null
         }
 
         return esValido
-    }
-
-    private fun imprimirDatos(){
-        Log.d("Información Personal", "Información Personal" )
-        Log.d("NOMBRE", campoNombre.text.toString())
-        Log.d("APELLIDO", campoApellido.text.toString())
-        val sexo = findViewById<RadioGroup>(R.id.sexos).checkedRadioButtonId
-        if (sexo!=-1){ Log.d("SEXO", "${findViewById<RadioButton>(sexo).text}")
-        }
-        Log.d("FECHA DE NACIMIENTO", textofecha.text.toString())
-        if (!spinnerEducacion.selectedItem.toString().equals("Seleccione")){
-            Log.d("GRADO DE ESCOLARIDAD", spinnerEducacion.selectedItem.toString())
-        }
     }
 }
