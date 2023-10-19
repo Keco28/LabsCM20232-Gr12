@@ -70,6 +70,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation ("androidx.constraintlayout:constraintlayout:2.2.0-alpha12")
-    // To use constraintlayout in compose
     implementation ("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha12")
+    implementation ("com.google.android.gms:play-services-ads:22.4.0")
 }

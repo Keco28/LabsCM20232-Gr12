@@ -8,6 +8,9 @@ import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.ComponentActivity
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 
 
 class ContactDataActivity : ComponentActivity() {
@@ -18,11 +21,16 @@ class ContactDataActivity : ComponentActivity() {
     private lateinit var textoCiudad: AutoCompleteTextView
     private lateinit var textDireccion: EditText
 
-
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.contact_data_layout)
 
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView2)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         val nombre = intent.getStringExtra("NOMBRE").toString()
         val apellido = intent.getStringExtra("APELLIDO").toString()

@@ -13,18 +13,11 @@ import android.widget.TextView
 import android.widget.AdapterView
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import co.edu.udea.compumovil.gr12_20232.lab1.ui.theme.Labs20232Gr12Theme
 import java.util.Calendar
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 
 class MainActivity : ComponentActivity() {
     private lateinit var btnFecha: Button
@@ -35,10 +28,16 @@ class MainActivity : ComponentActivity() {
     private lateinit var campoNombre: EditText
     private lateinit var campoApellido: EditText
 
-
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.personal_data_layout)
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         //verificación de datos obligatorios y cambio de vista
         findViewById<Button>(R.id.btnSiguiente).setOnClickListener {
